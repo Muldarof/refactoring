@@ -32,3 +32,5 @@ const plays = {
         "type": "tragedy"
     }
 }
+
+console.log(statement(invoices, plays))
