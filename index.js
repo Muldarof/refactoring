@@ -33,4 +33,11 @@ var plays = {
     }
 }
 //console.log(`Invoices: ${invoices[0].performances}`)
-console.log(statement(invoices[0], plays))
+//console.log(statement(invoices[0], plays))
+function main(invoices, plays){
+    for(let invoice of invoices){
+        console.log(`${statement(invoice, plays)}`)
+    }
+}
+
+main(invoices, plays)
