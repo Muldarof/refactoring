@@ -1,5 +1,5 @@
-import { statement } from "./invoice";
-const invoices = [
+import { statement } from "./invoice.js";
+var invoices = [
     {
         "customer": "BigCo",
         "performances": [
@@ -18,7 +18,7 @@ const invoices = [
         ]
     }
 ]
-const plays = {
+var plays = {
     "hamlet": {
         "name": "Hamlet",
         "type": "tragedy"
@@ -32,5 +32,5 @@ const plays = {
         "type": "tragedy"
     }
 }
-
+console.log(`Invoices: ${invoices.performances}`)
 console.log(statement(invoices, plays))
