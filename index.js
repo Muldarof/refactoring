@@ -32,5 +32,5 @@ var plays = {
         "type": "tragedy"
     }
 }
-console.log(`Invoices: ${invoices.performances}`)
-console.log(statement(invoices, plays))
+//console.log(`Invoices: ${invoices[0].performances}`)
+console.log(statement(invoices[0], plays))
