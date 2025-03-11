@@ -8,7 +8,7 @@ export function statement (invoice, plays){
 
     for (let perf of invoice.performances){
 
-        let thisAmount = amountFor(perf, playFor(perf));
+        let thisAmount = amountFor(perf);
 
         //add volume credits
         volumeCredits += Math.max(perf.audience - 30, 0);
@@ -23,7 +23,7 @@ export function statement (invoice, plays){
     result += `You earned ${volumeCredits} credits\n`
     return result;
 
-    function amountFor(aPerformance, play) {
+    function amountFor(aPerformance) {
         let result = 0
         switch (playFor(aPerformance).type) {
             case "tragedy":
