@@ -5,6 +5,14 @@ export function statement (invoice, plays){
 
 }
 
+function usd(aNumber) {
+    return new Intl.NumberFormat("en-US",
+        {
+            style: "currency", currency: "USD",
+            minimumFractionDigits: 2
+        }).format(aNumber / 100);
+}
+
 function renderPlainText(data, plays) {
     let result = `Statement for ${data.customer}\n`;
     for (let perf of data.performances) {
@@ -14,13 +22,4 @@ function renderPlainText(data, plays) {
     result += `Amount owed is ${usd(data.totalAmount)}\n`;
     result += `You earned ${data.totalVolumeCredits} credits\n`;
     return result;
-
-    function usd(aNumber) {
-        return new Intl.NumberFormat("en-US",
-            {
-                style: "currency", currency: "USD",
-                minimumFractionDigits: 2
-            }).format(aNumber / 100);
-    }
-    
 }
