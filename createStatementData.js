@@ -83,3 +83,10 @@ class PerformanceCalculator{
     }
 }
 
+class TragedyCalculator extends PerformanceCalculator{
+
+}
+class ComdeyCalculator extends PerformanceCalculator{
+    
+}
+
