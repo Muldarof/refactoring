@@ -36,7 +36,12 @@ var plays = {
 //console.log(statement(invoices[0], plays))
 function main(invoices, plays){
     for(let invoice of invoices){
-        console.log(`${statement(invoice, plays)}`)
+        let expectedOutput = `Statement for BigCo\n Hamlet: $650.00 (55 seats)\n As You Like It: $580.00 (35 seats)\n Othello: $500.00 (40 seats)\n Amount owed is $1730.00\nYou earned 47 credits`
+        let statementOutput = statement(invoice, plays)
+        console.log(`Expected Output:\n=============================\n${expectedOutput}`)
+        console.log(`Actual Output:\n=============================\n${statementOutput}`)
+        let comparison = expectedOutput === statementOutput
+        console.log(`${comparison}`)
     }
 }
 
