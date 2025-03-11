@@ -60,15 +60,7 @@ class PerformanceCalculator{
     }
 
     get amount() {
-        let result = 0;
-        switch (this.play.type) {
-            case "tragedy":
-                throw 'bad thing';
-            case "comedy":
-                throw 'bad thing'
-                defualt: throw new Error(`unknown type: ${this.play.type}`);
-        }
-        return result;
+        throw new Error('subclass respnsibility')
     }
 
     get volumeCredits() {
