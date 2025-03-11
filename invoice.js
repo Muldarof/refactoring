@@ -35,7 +35,6 @@ export function statement (invoice, plays){
     function volumeCreditsFor(aPerformance) {
         let result = 0
         result += Math.max(aPerformance.audience - 30, 0);
-        //add extra credit for every ten comedy attendees
         if ("comedy" === playFor(aPerformance)) result += Math.floor(aPerformance.audience / 5);
         return result;
     }
