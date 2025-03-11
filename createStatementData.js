@@ -19,7 +19,9 @@ export function createStatementData(invoice, plays) {
         return plays[aPerformance.playID];
     }
     
-    
+    function amountFor(aPerformance){
+        return new PerformanceCalculator(aPerformance, playFor(aPerformance)).amount;
+    }
     
     function volumeCreditsFor(aPerformance) {
         let result = 0;
