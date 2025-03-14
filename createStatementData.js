@@ -52,7 +52,6 @@ function createPerformanceCalculator(aPerformance, aPlay){
     }
 }
 
-
 class PerformanceCalculator{
     constructor(aPerformance, aPlay){
         this.performance = aPerformance;
@@ -77,6 +76,7 @@ class TragedyCalculator extends PerformanceCalculator{
         return result;
     }
 }
+
 class ComdeyCalculator extends PerformanceCalculator{
     get amount(){
         let result = 30000;
